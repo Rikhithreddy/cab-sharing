@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Cab Sharing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="firstsection">
+        <div class="first">
+            <img src="./images/IITG_logo.png" width="30px" padding-right="2px">
+            <p>IITG</p>
+
+        </div>
+        <div>
+            <ul class="first-left">
+                <div><a href="#home-content"> Home</a></div>
+                <div><a href="#About-content"> About </a></div>
+                <div><a href="#Contact-content"> Contact </a></div>
+                <div><a href="#find-content">Services</a></div>
+            </ul>
+        </div>
+        <div class="first-lasts" id="Contact-content">
+            <img src="./images/phone-call_8803143.png" width="32px">
+            <div class="first-last">Call us Now</div>
+            <div class="first-last">Email Us</div>
+        </div>
+    </section>
+    <section class="hero" id="home-content">
+        <div class="hero-content">
+            <h1>Share Your Ride, Save the Cost!</h1>
+            <p>Connecting students for affordable and sustainable campus travel.</p>
+            <div class="hero-buttons">
+                <div class="button"><a href="#find-content" class="primary-button">Find Ride</a></div>
+                <div class="button"><a href="#offer-content" class="secondary-button">Offer Ride</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="how-it-works" id="About-content">
+        <h2>How It Works</h2>
+        <p class="how-it-works-description">Easily connect with fellow students for a shared and sustainable ride.</p>
+        <div class="steps">
+            <div class="step">
+                <img src="https://img.icons8.com/color/96/find-user-male.png" alt="Find a Ride">
+                <h3>Find a Ride</h3>
+                <p>Search for available rides based on your destination, date, and time.</p>
+            </div>
+            <div class="step">
+                <img src="./images/lift.png" alt="Request a Ride" height="30%" width="50%">
+                <h3>Offer a Ride</h3>
+                <p>Submit a request to join a ride or offer one to fellow students.</p>
+            </div>
+            <div class="step">
+                <img src="https://img.icons8.com/color/96/meeting.png" alt="Meet Your Driver">
+                <h3>Meet Your Patner</h3>
+                <p>Arrange a meeting spot on campus and get ready for your journey.</p>
+            </div>
+            <div class="step">
+                <img src="./images/car.png" alt="Travel Together">
+                <h3>Travel Together</h3>
+                <p>Enjoy a shared, cost-effective, and eco-friendly ride with fellow students.</p>
+            </div>
+        </div>
+    </section>
+    <header>
+        <h1>Campus Cab Sharing</h1>
+        <p>Find or offer rides with fellow campus students.</p>
+    </header>
+
+    <section class="search-filter" id="find-content">
+        <h2>Find a Ride</h2>
+        <div class="filter-options">
+            <label for="destination">Destination:</label>
+            <select id="destination">
+                <option value="" disabled selected>Select</option>
+                <option value="airport">Airport</option>
+                <option value="NCS square mall">NCS square mall</option>
+                <option value="Guwahati railway station">Guwahati railway station</option>
+                <option value="Kamakhya railway station">Kamakhya railway station</option>
+                <option value="city-center">City Center</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+
+            <label for="time">Time:</label>
+            <input type="time" id="time">
+
+            <button onclick="filterRides()">Search</button>
+        </div>
+    </section>
+
+    <section class="search-filter" id="offer-content">
+        <h2>Offer a Ride</h2>
+        <div class="filter-options">
+
+            <label for="Name">Name:</label>
+            <input type="" id="Name">
+
+            <label for="Gender">Gender:</label>
+            <select id="hostel">
+                <option value="" disabled selected>Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="destination">Destination:</label>
+            <select id="destination">
+                <option value="" disabled selected>Select</option>
+                <option value="airport">Airport</option>
+                <option value="NCS square mall">NCS square mall</option>
+                <option value="Guwahati railway station">Guwahati railway station</option>
+                <option value="Kamakhya railway station">Kamakhya railway station</option>
+                <option value="city-center">City Center</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+
+            <label for="time">Time:</label>
+            <input type="time" id="time">
+
+            <label for="hostel">Hostel:</label>
+            <select id="hostel">
+                <option value="" disabled selected>Select</option>
+                <option value="Brahmaputra">Brahmaputra</option>
+                <option value="Disang">Disang</option>
+                <option value="Kapili">Kapili</option>
+                <option value="Dihing">Dihing</option>
+                <option value="Lohit">Lohit</option>
+                <option value="Siang">Siang</option>
+                <option value="Manas">Manas</option>
+                <option value="Gaurang">Gaurang</option>
+                <option value="Kameng">Kameng</option>
+                <option value="Barak">Barak</option>
+                <option value="Umiam">Umiam</option>
+                <option value="Subansiri">Subansiri</option>
+                <option value="Dhansiri">Dhansiri</option>
+            </select>
+
+            <label for="Mobilenumber">Mobilenumber:</label>
+            <input type="" id="Mobilenumber">
+
+            <button onclick="">Upload</button>
+        </div>
+    </section>
+
+    <section class="ride-listings">
+        <h2>Available Rides</h2>
+        <div class="ride-card" id="rideList">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <section class="benefits">
+        <h2>Why Choose Campus Cab Sharing?</h2>
+        <p class="benefits-description">Our platform offers cost-effective, convenient, and eco-friendly travel options
+            tailored for campus students.</p>
+        <div class="benefit-cards">
+            <div class="benefit-card">
+                <img src="./images/money.png" alt="Cost Savings">
+                <h3>Cost Savings</h3>
+                <p>Reduce your travel expenses by sharing rides with fellow students.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="https://img.icons8.com/color/96/checked-checkbox.png" alt="Convenience">
+                <h3>Convenience</h3>
+                <p>Easily find or offer rides with flexible options to fit your schedule.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="./images/eco.png" alt="Eco-Friendly">
+                <h3>Eco-Friendly</h3>
+                <p>Reduce your carbon footprint by opting for a shared, sustainable ride.</p>
+            </div>
+        </div>
+    </section>
+    <section class="featured-rides">
+        <h2>Popular Destinations & Featured Rides</h2>
+        <p class="section-description">Explore popular destinations or find recent rides that match your travel plans.
+        </p>
+        <div class="ride-cards">
+            <div class="ride-card">
+                <img src="https://img.icons8.com/color/96/airport.png" alt="Airport">
+                <h3>Airport</h3>
+                <p>Next Ride: Today at 5:00 PM</p>
+                <a href="" class="button">Join Ride</a>
+            </div>
+            <div class="ride-card">
+                <img src="https://img.icons8.com/color/96/train.png" alt="Railway Station">
+                <h3>Railway Station</h3>
+                <p>Next Ride: Tomorrow at 8:30 AM</p>
+                <a href="" class="button">Join Ride</a>
+            </div>
+            <div class="ride-card">
+                <div class="img">
+                    <img src="https://img.icons8.com/color/96/building.png" alt="City Center">
+                </div>
+                <h3>City Center</h3>
+                <p>Next Ride: Friday at 2:00 PM</p>
+                <a href="" class="button">Join Ride</a>
+
+            </div>
+            <div class="ride-card">
+                <div class="img">
+                    <img src="https://img.icons8.com/color/96/building.png" alt="Beachside">
+                </div>
+                <h3>NCS square mall</h3>
+                <p>Next Ride: Saturday at 9:00 AM</p>
+                <a href="" class="button">Join Ride</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home-content">Home</a>
+                <a href="#About-content">About</a>
+                <a href="#find-content">Find a Ride</a>
+                <a href="#offer-content">Offer a Ride</a>
+                <a href="#Contact-content">Contact Us</a>
+            </div>
+            <div class="footer-socials">
+                <a href=""><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+                <a href=""><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                        alt="Instagram"></a>
+                <a href=""><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+                <a href=""><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <p class="footer-contact">Email: support@campuscabsharing.com | Phone: +1 (123) 456-7890</p>
+            <p class="footer-legal">&copy; 2024 Campus Cab Sharing Platform. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
